@@ -1,0 +1,19 @@
+# Robots.txt - Olliver Digital
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.olliverdigital.com.br/sitemap.xml
+
+# Bloquear acesso a diretórios administrativos (se houver)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+
+# Permitir crawling de assets
+Allow: /assets/
+Allow: /images/
+
+# Crawl-delay (opcional, ajuste conforme necessário)
+# Crawl-delay: 10
