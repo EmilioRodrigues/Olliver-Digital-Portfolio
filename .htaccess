@@ -44,6 +44,23 @@
 </IfModule>
 
 # ----------------------------------------------------------------------
+# | Security Headers                                                   |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Protect against XSS, Clickjacking, MIME-sniffing
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # HSTS (Force HTTPS) - Enable only if HTTPS is active
+    # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    
+    # CSP (Basic adjustment for scripts/styles)
+    # Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
+</IfModule>
+
+# ----------------------------------------------------------------------
 # | Custom Error Pages                                                 |
 # ----------------------------------------------------------------------
 ErrorDocument 404 /index.html

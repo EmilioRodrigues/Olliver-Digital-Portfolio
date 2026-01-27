@@ -1,0 +1,33 @@
+# Dependências
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos de Backup e Temporários
+*-backup.html
+*.zip
+*.tar.gz
+*.rar
+tmp/
+
+# Arquivos Gerados pelo Agente (se não quiser versionar)
+# .agent/ 
+# (Geralmente mantemos .agent para compartilhar skills/regras, mas ignoramos dados de sessão se houver)
+
+# Saída de Build (se houver no futuro)
+dist/
+build/
